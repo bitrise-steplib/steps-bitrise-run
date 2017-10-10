@@ -13,9 +13,9 @@ summary: |
   Lets you run a bitrise workflow from your git repo's bitrise.xml
 description: |
   Lets you run a bitrise workflow from your git repo's bitrise.xml
-website: https://github.com/KTamas-Bitrise/step-bitrise-run
-source_code_url: https://github.com/KTamas-Bitrise/step-bitrise-run
-support_url: https://github.com/KTamas-Bitrise/step-bitrise-run/issues
+website: https://github.com/bitrise-steplib/step-bitrise-run
+source_code_url: https://github.com/bitrise-steplib/step-bitrise-run
+support_url: https://github.com/bitrise-steplib/step-bitrise-run/issues
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
