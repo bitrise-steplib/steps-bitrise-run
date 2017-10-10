@@ -31,13 +31,13 @@ is_always_run: false
 is_skippable: false
 run_if: ""
 
-deps:
-  brew:
-  - name: git
-  - name: wget
-  apt_get:
-  - name: git
-  - name: wget
+# deps:
+#   brew:
+#   - name: git
+#   - name: wget
+#   apt_get:
+#   - name: git
+#   - name: wget
 
 
 toolkit:
