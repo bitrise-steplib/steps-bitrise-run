@@ -1,6 +1,6 @@
 # Bitrise Run
 
-Lets you run a bitrise workflow from your git repo's bitrise.xml
+Runs a specified workflow from the given bitrise.yml.
 
 
 ## How to use this Step

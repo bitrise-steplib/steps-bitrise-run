@@ -10,9 +10,9 @@
 title: |-
   Bitrise Run
 summary: |
-  Lets you run a bitrise workflow from your git repo's bitrise.xml
+  Runs a specified workflow from the given bitrise.yml.
 description: |
-  Lets you run a bitrise workflow from your git repo's bitrise.xml
+  Runs a specified workflow from the given bitrise.yml.
 website: https://github.com/bitrise-steplib/step-bitrise-run
 source_code_url: https://github.com/bitrise-steplib/step-bitrise-run
 support_url: https://github.com/bitrise-steplib/step-bitrise-run/issues
