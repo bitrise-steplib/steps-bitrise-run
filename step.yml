@@ -1,0 +1,76 @@
+#
+# A couple of useful guides & docs:
+#
+# - Main Bitrise CLI docs: https://github.com/bitrise-io/bitrise/tree/master/_docs
+# - Step Development Guideline: https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
+# - Bitrise.yml format spec: https://github.com/bitrise-io/bitrise/blob/master/_docs/bitrise-yml-format-spec.md
+# - Bitrise docs: http://devcenter.bitrise.io/
+# - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
+
+title: |-
+  Bitrise Run
+summary: |
+  Lets you run a bitrise workflow from your git repo's bitrise.xml
+description: |
+  Lets you run a bitrise workflow from your git repo's bitrise.xml
+website: https://github.com/KTamas-Bitrise/step-bitrise-run
+source_code_url: https://github.com/KTamas-Bitrise/step-bitrise-run
+support_url: https://github.com/KTamas-Bitrise/step-bitrise-run/issues
+host_os_tags:
+  - osx-10.10
+  - ubuntu-16.04
+
+# Type tags are used for categorizing steps, for easier step discovery in Step Libraries.
+# You can find more information about type tags in the Step Development Guideline:
+# https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
+type_tags:
+  - deploy
+
+is_requires_admin_user: true
+is_always_run: false
+is_skippable: false
+run_if: ""
+
+deps:
+  brew:
+  - name: git
+  - name: wget
+  apt_get:
+  - name: git
+  - name: wget
+
+
+toolkit:
+  bash:
+    entry_file: step.sh
+
+
+inputs:
+  - workflow_id:
+    opts:
+      title: "Workflow ID"
+      summary: ID (name) of the Bitrise workflow to run.
+      description: |
+        ID (name) of the Bitrise workflow to run.
+      is_expand: true
+      is_required: true
+      value_options: []
+  - bitrise_config_path: "./bitrise.yml"
+    opts:
+      title: "bitrise.yml file"
+      summary: The location of the bitrise.yml file in your git repo.
+      description: |
+        The location of the bitrise.yml file in your git repo.
+      is_expand: true
+      is_required: false
+      value_options: []
+
+outputs:
+  - EXAMPLE_STEP_OUTPUT:
+    opts:
+      title: "Example Step Output"
+      summary: Summary. No more than 2-3 sentences.
+      description: |
+        Description of this output.
+
+        Can be Markdown formatted text.
