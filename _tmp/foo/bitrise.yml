@@ -8,4 +8,5 @@ workflows:
         inputs:
         - content: |
             #!/bin/bash
+            set -ex
             touch "test_file"
