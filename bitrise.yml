@@ -6,7 +6,7 @@ app:
   # If you want to share this step into a StepLib
   - BITRISE_STEP_ID: bitrise-run
   - BITRISE_STEP_VERSION: "0.9.0"
-  - BITRISE_STEP_GIT_CLONE_URL: https://github.com/bitrise-steplib/step-bitrise-run.git
+  - BITRISE_STEP_GIT_CLONE_URL: https://github.com/bitrise-steplib/steps-bitrise-run.git
   - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
 
 workflows:

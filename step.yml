@@ -2,9 +2,9 @@ title: Bitrise Run
 summary: Runs a specified workflow from the given bitrise.yml
 description: Runs a specified workflow from the given bitrise.yml
 
-website: https://github.com/bitrise-steplib/step-bitrise-run
-source_code_url: https://github.com/bitrise-steplib/step-bitrise-run
-support_url: https://github.com/bitrise-steplib/step-bitrise-run/issues
+website: https://github.com/bitrise-steplib/steps-bitrise-run
+source_code_url: https://github.com/bitrise-steplib/steps-bitrise-run
+support_url: https://github.com/bitrise-steplib/steps-bitrise-run/issues
 
 host_os_tags:
   - osx-10.10
