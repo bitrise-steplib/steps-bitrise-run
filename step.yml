@@ -1,0 +1,44 @@
+title: |-
+  Bitrise Run
+summary: |
+  Runs a specified workflow from the given bitrise.yml.
+description: |
+  Runs a specified workflow from the given bitrise.yml.
+website: https://github.com/bitrise-steplib/step-bitrise-run
+source_code_url: https://github.com/bitrise-steplib/step-bitrise-run
+support_url: https://github.com/bitrise-steplib/step-bitrise-run/issues
+host_os_tags:
+  - osx-10.10
+  - ubuntu-16.04
+
+type_tags:
+  - utility
+
+is_requires_admin_user: true
+is_always_run: false
+is_skippable: false
+run_if: ""
+
+toolkit:
+  bash:
+    entry_file: step.sh
+
+inputs:
+  - workflow_id: $BITRISE_TRIGGERED_WORKFLOW_ID
+    opts:
+      title: "Workflow ID"
+      summary: ID (name) of the Bitrise workflow to run.
+      description: |
+        ID (name) of the Bitrise workflow to run.
+      is_expand: true
+      is_required: true
+      value_options: []
+  - bitrise_config_path: "./bitrise.yml"
+    opts:
+      title: "bitrise.yml path"
+      summary: The Bitrise configuration (bitrise.yml) file path.
+      description: |
+        The Bitrise configuration (bitrise.yml) file path.
+      is_expand: true
+      is_required: true
+      value_options: []
