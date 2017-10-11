@@ -5,7 +5,7 @@ app:
   envs:
   # If you want to share this step into a StepLib
   - BITRISE_STEP_ID: bitrise-run
-  - BITRISE_STEP_VERSION: "0.0.1"
+  - BITRISE_STEP_VERSION: "0.9.0"
   - BITRISE_STEP_GIT_CLONE_URL: https://github.com/bitrise-steplib/step-bitrise-run
   - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
 
@@ -38,8 +38,8 @@ workflows:
         inputs:
         - content: |
             #!/bin/bash
-            if [ ! -e ./test_file ]
-            then
+            set -e
+            if [ ! -f ./test_file ] ; then
               exit 1
             else
               rm ./test_file

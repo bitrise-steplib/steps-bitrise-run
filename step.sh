@@ -1,17 +1,23 @@
 #!/bin/bash
-set -ex
-if [ -z ${workflow_id} ]
-then
-    echo "Workflow id is not defined or empty."
+set -e
+
+echo "Configs:"
+echo "- workflow_id: ${workflow_id}"
+echo "- bitrise_config_path: ${bitrise_config_path}"
+
+if [ -z ${workflow_id} ] ; then
+    echo "workflow_id is not defined or empty."
     exit 1
 fi
 
-if [ ! -e ${bitrise_config_path} ]
-then
-    echo "Bitrise config file does not exist: ${bitrise_config_path}"
+if [ -z ${bitrise_config_path} ] ; then
+    echo "bitrise_config_path is not defined or empty."
     exit 1
 fi
 
-echo "Workflow id: ${workflow_id}"
-echo "Bitrise config path: ${bitrise_config_path}"
+if [ ! -f ${bitrise_config_path} ] ; then
+    echo "bitrise_config_path does not exist: ${bitrise_config_path}"
+    exit 1
+fi
+
 bitrise run ${workflow_id} -c ${bitrise_config_path}
