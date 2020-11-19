@@ -1,6 +1,6 @@
 title: Bitrise Run
-summary: Runs a specified workflow from the given bitrise.yml
-description: Runs a specified workflow from the given bitrise.yml
+summary: Runs a specified workflow from the bitrise.yml file. Please make sure that you select an existing Workflow ID.
+description: Runs a specified workflow from the bitrise.yml file. Please make sure that you select an existing Workflow ID.
 
 website: https://github.com/bitrise-steplib/steps-bitrise-run
 source_code_url: https://github.com/bitrise-steplib/steps-bitrise-run
@@ -21,14 +21,14 @@ inputs:
   - workflow_id: $BITRISE_TRIGGERED_WORKFLOW_ID
     opts:
       title: "Workflow ID"
-      summary: ID (name) of the Bitrise workflow to run
-      description: ID (name) of the Bitrise workflow to run
+      summary: ID (name) of the workflow to run. It must exist in the bitrise.yml file.
+      description: ID (name) of the workflow to run. It must exist in the bitrise.yml file.
       is_expand: true
       is_required: true
   - bitrise_config_path: "./bitrise.yml"
     opts:
       title: "bitrise.yml path"
-      summary: The Bitrise configuration (bitrise.yml) file path
-      description: The Bitrise configuration (bitrise.yml) file path
+      summary: The Bitrise configuration (bitrise.yml) file path (relative from root folder).
+      description: The Bitrise configuration (bitrise.yml) file path (relative from root folder).
       is_expand: true
       is_required: true
