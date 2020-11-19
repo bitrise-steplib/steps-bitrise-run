@@ -21,14 +21,14 @@ inputs:
   - workflow_id: $BITRISE_TRIGGERED_WORKFLOW_ID
     opts:
       title: "Workflow ID"
-      summary: ID (name) of the workflow to run. It must exist in the bitrise.yml file.
-      description: ID (name) of the workflow to run. It must exist in the bitrise.yml file.
+      summary: "ID (name) of the workflow to run. It must exist in the bitrise.yml file."
+      description: "ID (name) of the workflow to run. It must exist in the bitrise.yml file."
       is_expand: true
       is_required: true
   - bitrise_config_path: "./bitrise.yml"
     opts:
       title: "bitrise.yml path"
-      summary: The Bitrise configuration (bitrise.yml) file path (relative from root folder).
-      description: The Bitrise configuration (bitrise.yml) file path (relative from root folder).
+      summary: "The Bitrise configuration (bitrise.yml) file path (relative from root folder)."
+      description: "The Bitrise configuration (bitrise.yml) file path (relative from root folder)."
       is_expand: true
       is_required: true
