@@ -1,6 +1,20 @@
-title: Bitrise Run
-summary: Runs a specified workflow from the given bitrise.yml
-description: Runs a specified workflow from the given bitrise.yml
+title: "Bitrise Run"
+summary: Runs a specified Workflow from the `bitrise.yml` file.
+description: |-
+  This Step runs a specified Workflow from the targeted `bitrise.yml` file.
+
+  ### Configuring the Step
+
+  1. Set the **Workflow ID** input. It uses the `$BITRISE_TRIGGERED_WORKFLOW_ID` Environment Variable (Env Var) by default. This Env Var is automatically set to the Workflow that triggered the build.
+  2. Set the **bitrise.yml path**. It's populated with `./bitrise.yml` path by default.
+
+  ### Troubleshooting
+  Please make sure that you select an existing Workflow ID.
+  Please make sure that you set a correct and existing `bitrise.yml` file path.
+
+  ### Related Steps
+  - [Bitrise Start Build](https://www.bitrise.io/integrations/steps/build-router-start)
+  - [Bitrise Wait for Build](https://www.bitrise.io/integrations/steps/build-router-wait)
 
 website: https://github.com/bitrise-steplib/steps-bitrise-run
 source_code_url: https://github.com/bitrise-steplib/steps-bitrise-run
@@ -21,14 +35,16 @@ inputs:
   - workflow_id: $BITRISE_TRIGGERED_WORKFLOW_ID
     opts:
       title: "Workflow ID"
-      summary: ID (name) of the Bitrise workflow to run
-      description: ID (name) of the Bitrise workflow to run
+      summary: "ID (name) of the workflow to run."
+      description: |-
+        ID (name) of the workflow to run.
+        
+        It must exist in the bitrise.yml file.
       is_expand: true
       is_required: true
   - bitrise_config_path: "./bitrise.yml"
     opts:
       title: "bitrise.yml path"
-      summary: The Bitrise configuration (bitrise.yml) file path
-      description: The Bitrise configuration (bitrise.yml) file path
+      summary: "The Bitrise configuration (bitrise.yml) file path (relative from root folder)."
       is_expand: true
       is_required: true
