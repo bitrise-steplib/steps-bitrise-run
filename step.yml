@@ -45,6 +45,6 @@ inputs:
   - bitrise_config_path: "./bitrise.yml"
     opts:
       title: "bitrise.yml path"
-      summary: "The Bitrise configuration (bitrise.yml) file path (relative from root folder)."
+      summary: "The Bitrise configuration (bitrise.yml) file path."
       is_expand: true
       is_required: true
